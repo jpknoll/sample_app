@@ -9,16 +9,18 @@
 #  updated_at :datetime        not null
 #
 class User < ActiveRecord::Base
-	attr_accessible :name, :email, :password, :password_confirmation
+	attr_accessible :user_name, :first_name, :last_name, :primary_instrument, :email, :password, :password_confirmation
 	has_secure_password
 	before_save :create_remember_token
 
-	validates(:name, :presence => false, :length => {:maximum => 50})
+	validates(:user_name, :presence => true, :length => {:maximum => 50})
+	validates(:first_name, :presence => true, :length => {:maximum => 50})
+	validates(:last_name, :presence => true, :length => {:maximum => 50})
 	validates(:password, :length => { :minimum => 6 })
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	validates(:email, 
-		:presence => false, 
-		#:format => { :with => VALID_EMAIL_REGEX },
+		:presence => true, 
+		:format => { :with => VALID_EMAIL_REGEX },
 		:uniqueness => { :case_sensitive => false })
 	validates :password_confirmation, :presence => true
 
