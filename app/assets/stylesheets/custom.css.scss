@@ -67,14 +67,14 @@ p {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 2px solid $grayLighter;
     &:first-child {
-      border: 0;
-      padding-top: 0;
+      border: 1;
+      padding-top: 1;
     }
     span {
       display: block;
-      margin-bottom: 3px;
+      margin-bottom: 10px;
       line-height: 1;
     }
     h1 {
@@ -111,7 +111,7 @@ aside {
   overflow: auto;
   margin-top: 10px;
   .gravatar {
-    margin: 1px 1px;
+    margin: 3px 1px;
   }
 }
 /* header */
@@ -229,8 +229,9 @@ input, textarea, select, .uneditable-input {
 }
 aside {
   textarea {
-    height: 100px;
+    height: 10px;
     margin-bottom: 5px;
   }
 }
+
 }
