@@ -35,6 +35,11 @@ textarea {
   }
 }
 
+#column_left{width:460px; margin-right:20px; float:left;}
+#column_right{width:160px; margin-right:20px; float:left;}
+#column_right_adsense{width:120px; float:left;}
+div.spacer{clear:both; height:10px; display:block;}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {

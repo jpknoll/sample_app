@@ -9,6 +9,8 @@
 #  updated_at :datetime        not null
 #
 class User < ActiveRecord::Base
+
+	devise :rpx_connectable
 	attr_accessible :user_name, :first_name, :last_name, :primary_instrument, :email, :password, :password_confirmation
 
 	has_many :microposts, :dependent=> :destroy
